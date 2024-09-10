@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+TODO:
+   + show menu when is clicked in mobile view
+*/
+
+@layer base {
+    @font-face {
+        font-family: 'futura-pt';
+        src: url("./fonts/futura/futura-light-bt.woff2") format('woff2');
+    }
+}
+
+@layer components {
+    body {
+        font-family: futura-pt, Avenir, -apple-system, BlinkMacSystemFont,
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .paragraph {
+        @apply flex flex-col w-10/12 md:w-8/12 lg:w-7/12 xl:w-6/12
+        gap-4 py-[8%] m-auto;
+    }
+
+    .paragraph .paragraph-title {
+        @apply font-bold text-lg/7 lg:text-2xl/10 xl:text-[1.8rem]/10;
+    }
+
+    .paragraph .paragraph-text {
+        @apply text-sm font-medium lg:text-xl;
+    }
+
+    .arrow-right {
+        @apply border-solid border-black
+        border-b-[1px] border-r-[1px] xl:border-b-2 xl:border-r-2
+        inline-block mb-[2px] p-[2px] xl:p-[3px] transform rotate-[-45deg];
+    }
+
+}
